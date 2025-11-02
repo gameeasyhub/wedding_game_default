@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Wedding Game</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload критичных ресурсов -->
+    <link rel="preload" href="assets/background.jpg" as="image">
+    <link rel="preload" href="assets/background_2.jpg" as="image">
+    <link rel="preload" href="assets/keepL.png" as="image">
+    <link rel="preload" href="assets/keepR.png" as="image">
+    <link rel="preload" href="assets/bouquet.png" as="image">
+    <link rel="preload" href="assets/man_1.png" as="image">
+    <link rel="preload" href="assets/man_2.png" as="image">
+    <link rel="preload" href="assets/woman_1.png" as="image">
+    <link rel="preload" href="assets/woman_2.png" as="image">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Стартовый экран -->
+        <div id="startScreen" class="screen">
+            <div class="game-area">
+                <button id="startButton" class="big-button">Начать</button>
+                <div id="loadingText" class="loading-text">Загрузка... 0%</div>
+            </div>
+        </div>
+
+        <!-- Экран Game Over -->
+        <div id="gameOverScreen" class="screen hidden">
+            <!-- Контент будет центрирован flexbox'ом -->
+            <div class="game-over-content">
+                <div id="leaderboardSection">
+                    <h3>Таблица лидеров</h3>
+                    <div id="leaderboardLoading">Загрузка...</div>
+                    <ol id="leaderboardList"></ol>
+                </div>
+                
+                <div id="playerActionSection">
+                    <p id="finalScore">Ваш результат: 0</p>
+                    <div id="nameInputSection" class="hidden">
+                        <input type="text" id="playerNameInput" placeholder="Введите ваше имя" maxlength="15">
+                        <button id="submitScoreButton" class="hud-button">Сохранить</button>
+                    </div>
+                    <button id="restartButton" class="big-button">Играть снова</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

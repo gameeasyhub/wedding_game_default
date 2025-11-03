@@ -2,54 +2,36 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Wedding Game</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Preload критичных ресурсов -->
-    <link rel="preload" href="assets/background.jpg" as="image">
-    <link rel="preload" href="assets/background_2.jpg" as="image">
-    <link rel="preload" href="assets/keepL.png" as="image">
-    <link rel="preload" href="assets/keepR.png" as="image">
-    <link rel="preload" href="assets/bouquet.png" as="image">
-    <link rel="preload" href="assets/man_1.png" as="image">
-    <link rel="preload" href="assets/man_2.png" as="image">
-    <link rel="preload" href="assets/woman_1.png" as="image">
-    <link rel="preload" href="assets/woman_2.png" as="image">
+    <!-- ВАЖНО: Поменяйте заголовок на нужный для вашего сайта -->
+    <title>Интерактивные свадебные приглашения</title>
+
+    <style>
+        /* Эти стили растягивают ваше приложение на весь экран без рамок и отступов */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Убираем возможные полосы прокрутки */
+        }
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <div id="gameContainer">
-        <canvas id="gameCanvas"></canvas>
-        
-        <!-- Стартовый экран -->
-        <div id="startScreen" class="screen">
-            <div class="game-area">
-                <button id="startButton" class="big-button">Начать</button>
-                <div id="loadingText" class="loading-text">Загрузка... 0%</div>
-            </div>
-        </div>
 
-        <!-- Экран Game Over -->
-        <div id="gameOverScreen" class="screen hidden">
-            <!-- Контент будет центрирован flexbox'ом -->
-            <div class="game-over-content">
-                <div id="leaderboardSection">
-                    <h3>Таблица лидеров</h3>
-                    <div id="leaderboardLoading">Загрузка...</div>
-                    <ol id="leaderboardList"></ol>
-                </div>
-                
-                <div id="playerActionSection">
-                    <p id="finalScore">Ваш результат: 0</p>
-                    <div id="nameInputSection" class="hidden">
-                        <input type="text" id="playerNameInput" placeholder="Введите ваше имя" maxlength="15">
-                        <button id="submitScoreButton" class="hud-button">Сохранить</button>
-                    </div>
-                    <button id="restartButton" class="big-button">Играть снова</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="game.js"></script>
+    <!-- 
+        ВАЖНО: Вставьте сюда URL-адрес вашего опубликованного веб-приложения Google Apps Script.
+        Это должна быть ссылка вида /exec.
+    -->
+    <iframe src="https://script.google.com/macros/s/AKfycbwVYEWxcVuDHUAlilBRxu0_uvNVsaaXOpJ4MoXkdN8llnUjXW0m1srAuxsxccH_kmfy8g/exec"></iframe>
+
 </body>
 </html>
